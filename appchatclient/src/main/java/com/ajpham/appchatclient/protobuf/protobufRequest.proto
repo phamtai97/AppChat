@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+//package appchatclient;
+
+//option java_package = "com.ajpham.appchatclient.dto";
+option java_outer_classname = "RequestDTO";
+
+enum TypeMessage {
+    LOGIN = 0;
+    REGISTER = 1;
+    LOGOUT = 2;
+    CREATECHANNEL = 3;
+    AUTHENCATION = 4;
+    CHAT = 5;
+    LISTUSER = 6;
+    LISTCHANNEL = 7;
+    FINDUSER = 8;
+    ALLMESSAGE = 9;
+}
+
+message Token {
+    string token = 1;
+}
+
+message User {
+    string name = 1;
+    string userName = 2;
+    string password = 3;
+    bytes avatar = 4;
+}
+
+message Channel {
+    string userCreate = 1;
+    string channelName = 2;
+    bytes avatar = 4;
+    string listMembers = 3; 
+}
+
+message Message {
+    string body = 1;
+    string userNameSend = 2;
+}
+
+message Request {
+    TypeMessage type = 1;
+    Token token = 2;
+    User user = 3;
+    string userReq = 4;
+    Channel channel = 5;
+    string channelName = 6;
+    Message messageChat = 7;
+}
