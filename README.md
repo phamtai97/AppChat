@@ -104,4 +104,4 @@
 
 ![Imgur](https://i.imgur.com/bf5jti7.png)
 
-- Other funtion: Load list Room chat, load all message in channel, find user.
+- Other funtion: Load list Room chat, load all message in channel, find user, find room chat.
