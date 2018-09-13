@@ -1,0 +1,280 @@
+22:01:01.014 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:55114 Active
+22:01:01.014 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:55114 Active
+22:27:29.942 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 Active
+22:27:29.942 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 Active
+22:27:34.853 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 request Login + [userName]: taiptht[password] 123
+22:27:34.853 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 request Login + [userName]: taiptht[password] 123
+22:27:35.067 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 request Login + Success
+22:27:35.067 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 request Login + Success
+22:27:40.544 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 In Active
+22:27:40.544 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56944 In Active
+22:28:01.509 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 Active
+22:28:01.509 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 Active
+22:28:10.156 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + [userName]: taiptht[password] 123
+22:28:10.156 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + [userName]: taiptht[password] 123
+22:28:10.158 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + Success
+22:28:10.158 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + Success
+22:28:17.628 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + [userName]: taiptht[password] 123
+22:28:17.628 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + [userName]: taiptht[password] 123
+22:28:17.631 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + Success
+22:28:17.631 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 request Login + Success
+22:28:21.798 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 In Active
+22:28:21.798 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:56948 In Active
+22:57:27.866 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57436 Active
+22:57:27.866 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57436 Active
+22:57:31.321 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 Active
+22:57:31.321 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 Active
+22:57:38.694 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 request Login [userName]: taiptht[password] 123
+22:57:38.694 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 request Login [userName]: taiptht[password] 123
+22:57:38.863 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 request Login SUCCESS
+22:57:38.863 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 request Login SUCCESS
+22:57:38.881 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 request Login [userName]: taiptht Authencation
+22:57:38.881 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 request Login [userName]: taiptht Authencation
+22:57:54.195 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 In Active
+22:57:54.195 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57438 In Active
+22:58:36.948 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57436 In Active
+22:58:36.948 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57436 In Active
+22:58:47.969 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 Active
+22:58:47.969 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 Active
+22:58:49.680 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 Active
+22:58:49.680 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 Active
+22:58:53.715 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Login [userName]: taiptht [password] 123
+22:58:53.715 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Login [userName]: taiptht [password] 123
+22:58:53.891 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Login SUCCESS
+22:58:53.891 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Login SUCCESS
+22:58:53.906 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Login [userName]: taiptht Authencation
+22:58:53.906 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Login [userName]: taiptht Authencation
+22:59:07.111 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: tuannld [password] 123
+22:59:07.111 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: tuannld [password] 123
+22:59:07.497 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login FAILED
+22:59:07.497 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login FAILED
+22:59:12.799 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: tuannld [password] 455
+22:59:12.799 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: tuannld [password] 455
+22:59:12.804 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login FAILED
+22:59:12.804 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login FAILED
+22:59:21.357 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: tuannlh [password] 455
+22:59:21.357 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: tuannlh [password] 455
+22:59:21.365 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login FAILED
+22:59:21.365 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login FAILED
+22:59:29.759 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: vutq [password] 456
+22:59:29.759 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: vutq [password] 456
+22:59:29.776 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login SUCCESS
+22:59:29.776 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login SUCCESS
+22:59:29.789 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: vutq Authencation
+22:59:29.789 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Login [userName]: vutq Authencation
+22:59:37.987 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Chat [userName]: vutq [messBody]: hello em to [channelName]: Tuan_Tai_Vu
+22:59:37.987 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Chat [userName]: vutq [messBody]: hello em to [channelName]: Tuan_Tai_Vu
+22:59:52.110 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Chat [userName]: vutq [messBody]: hello a to [channelName]: Tuan_Tai_Vu
+22:59:52.110 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 request Chat [userName]: vutq [messBody]: hello a to [channelName]: Tuan_Tai_Vu
+23:00:08.999 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 In Active
+23:00:08.999 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57454 In Active
+23:00:14.403 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Logout [userName]: taiptht SUCCESS
+23:00:14.403 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 request Logout [userName]: taiptht SUCCESS
+23:00:17.839 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 In Active
+23:00:17.839 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57456 In Active
+23:07:22.010 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 Active
+23:07:22.010 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 Active
+23:07:26.837 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht [password] 123
+23:07:26.837 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht [password] 123
+23:07:26.988 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login SUCCESS
+23:07:26.988 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login SUCCESS
+23:07:27.005 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht Authencation
+23:07:27.005 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht Authencation
+23:07:30.505 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Logout [userName]: taiptht SUCCESS
+23:07:30.505 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Logout [userName]: taiptht SUCCESS
+23:07:34.092 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht [password] 123
+23:07:34.092 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht [password] 123
+23:07:34.095 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login SUCCESS
+23:07:34.095 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login SUCCESS
+23:07:34.098 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht Authencation
+23:07:34.098 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 request Login [userName]: taiptht Authencation
+23:07:47.270 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 In Active
+23:07:47.270 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57594 In Active
+23:13:18.937 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 Active
+23:13:18.937 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 Active
+23:13:35.588 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 request Login [userName]: taiptht [password] 123
+23:13:35.588 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 request Login [userName]: taiptht [password] 123
+23:13:35.589 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 request Login SUCCESS
+23:13:35.589 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 request Login SUCCESS
+23:13:35.603 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 request Login [userName]: taiptht Authencation
+23:13:35.603 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 request Login [userName]: taiptht Authencation
+23:13:48.175 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 In Active
+23:13:48.175 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57670 In Active
+23:13:54.665 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 Active
+23:13:54.665 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 Active
+23:13:59.064 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 request Login [userName]: taiptht [password] 123
+23:13:59.064 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 request Login [userName]: taiptht [password] 123
+23:13:59.065 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 request Login SUCCESS
+23:13:59.065 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 request Login SUCCESS
+23:13:59.077 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 request Login [userName]: taiptht Authencation
+23:13:59.077 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 request Login [userName]: taiptht Authencation
+23:14:30.695 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 In Active
+23:14:30.695 [nioEventLoopGroup-3-3] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57682 In Active
+23:14:35.865 [nioEventLoopGroup-3-4] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57692 Active
+23:14:35.865 [nioEventLoopGroup-3-4] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57692 Active
+23:14:39.754 [nioEventLoopGroup-3-4] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57692 In Active
+23:14:39.754 [nioEventLoopGroup-3-4] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57692 In Active
+23:14:50.503 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 Active
+23:14:50.503 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 Active
+23:14:55.092 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 request Login [userName]: taiptht [password] 123
+23:14:55.092 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 request Login [userName]: taiptht [password] 123
+23:14:55.093 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 request Login SUCCESS
+23:14:55.093 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 request Login SUCCESS
+23:14:55.103 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 request Login [userName]: taiptht Authencation
+23:14:55.103 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 request Login [userName]: taiptht Authencation
+23:15:06.269 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 In Active
+23:15:06.269 [nioEventLoopGroup-3-5] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:57698 In Active
+23:42:30.441 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 Active
+23:42:30.441 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 Active
+23:42:34.989 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 request Login [userName]: taiptht [password] 123
+23:42:34.989 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 request Login [userName]: taiptht [password] 123
+23:42:34.991 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 request Login SUCCESS
+23:42:34.991 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 request Login SUCCESS
+23:42:35.005 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 request Login [userName]: taiptht Authencation
+23:42:35.005 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 request Login [userName]: taiptht Authencation
+23:42:39.934 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 In Active
+23:42:39.934 [nioEventLoopGroup-3-6] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58132 In Active
+23:42:45.642 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 Active
+23:42:45.642 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 Active
+23:42:52.172 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 request Login [userName]: taiptht [password] 123
+23:42:52.172 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 request Login [userName]: taiptht [password] 123
+23:42:52.173 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 request Login SUCCESS
+23:42:52.173 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 request Login SUCCESS
+23:42:52.183 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 request Login [userName]: taiptht Authencation
+23:42:52.183 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 request Login [userName]: taiptht Authencation
+23:43:14.541 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 In Active
+23:43:14.541 [nioEventLoopGroup-3-7] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58136 In Active
+23:44:35.358 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 Active
+23:44:35.358 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 Active
+23:44:43.087 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 request Login [userName]: taiptht [password] 123
+23:44:43.087 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 request Login [userName]: taiptht [password] 123
+23:44:43.088 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 request Login SUCCESS
+23:44:43.088 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 request Login SUCCESS
+23:44:43.099 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 request Login [userName]: taiptht Authencation
+23:44:43.099 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 request Login [userName]: taiptht Authencation
+23:46:05.595 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 In Active
+23:46:05.595 [nioEventLoopGroup-3-8] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58166 In Active
+23:47:31.066 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 Active
+23:47:31.066 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 Active
+23:47:36.142 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 request Login [userName]: taiptht [password] 123
+23:47:36.142 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 request Login [userName]: taiptht [password] 123
+23:47:36.151 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 request Login SUCCESS
+23:47:36.151 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 request Login SUCCESS
+23:47:36.162 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 request Login [userName]: taiptht Authencation
+23:47:36.162 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 request Login [userName]: taiptht Authencation
+23:47:49.479 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 In Active
+23:47:49.479 [nioEventLoopGroup-3-9] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58224 In Active
+23:48:01.253 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 Active
+23:48:01.253 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 Active
+23:48:04.918 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 request Login [userName]: taiptht [password] 123
+23:48:04.918 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 request Login [userName]: taiptht [password] 123
+23:48:04.919 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 request Login SUCCESS
+23:48:04.919 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 request Login SUCCESS
+23:48:04.931 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 request Login [userName]: taiptht Authencation
+23:48:04.931 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 request Login [userName]: taiptht Authencation
+23:48:25.114 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 In Active
+23:48:25.114 [nioEventLoopGroup-3-10] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58230 In Active
+23:49:25.788 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 Active
+23:49:25.788 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 Active
+23:49:31.188 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 request Login [userName]: taiptht [password] 123
+23:49:31.188 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 request Login [userName]: taiptht [password] 123
+23:49:31.189 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 request Login SUCCESS
+23:49:31.189 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 request Login SUCCESS
+23:49:31.200 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 request Login [userName]: taiptht Authencation
+23:49:31.200 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 request Login [userName]: taiptht Authencation
+23:49:55.093 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 In Active
+23:49:55.093 [nioEventLoopGroup-3-11] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58250 In Active
+23:50:45.483 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 Active
+23:50:45.483 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 Active
+23:50:50.356 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 request Login [userName]: taiptht [password] 123
+23:50:50.356 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 request Login [userName]: taiptht [password] 123
+23:50:50.357 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 request Login SUCCESS
+23:50:50.357 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 request Login SUCCESS
+23:50:50.369 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 request Login [userName]: taiptht Authencation
+23:50:50.369 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 request Login [userName]: taiptht Authencation
+23:51:24.811 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 In Active
+23:51:24.811 [nioEventLoopGroup-3-12] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58274 In Active
+23:51:51.113 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 Active
+23:51:51.113 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 Active
+23:51:56.392 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 request Login [userName]: taiptht [password] 123
+23:51:56.392 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 request Login [userName]: taiptht [password] 123
+23:51:56.393 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 request Login SUCCESS
+23:51:56.393 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 request Login SUCCESS
+23:51:56.404 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 request Login [userName]: taiptht Authencation
+23:51:56.404 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 request Login [userName]: taiptht Authencation
+23:52:37.995 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 In Active
+23:52:37.995 [nioEventLoopGroup-3-13] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58286 In Active
+23:52:43.750 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 Active
+23:52:43.750 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 Active
+23:52:49.272 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 request Login [userName]: taiptht [password] 123
+23:52:49.272 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 request Login [userName]: taiptht [password] 123
+23:52:49.273 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 request Login SUCCESS
+23:52:49.273 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 request Login SUCCESS
+23:52:49.285 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 request Login [userName]: taiptht Authencation
+23:52:49.285 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 request Login [userName]: taiptht Authencation
+23:53:42.300 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 In Active
+23:53:42.300 [nioEventLoopGroup-3-14] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58300 In Active
+23:53:59.071 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 Active
+23:53:59.071 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 Active
+23:54:03.806 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 request Login [userName]: taiptht [password] 123
+23:54:03.806 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 request Login [userName]: taiptht [password] 123
+23:54:03.806 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 request Login SUCCESS
+23:54:03.806 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 request Login SUCCESS
+23:54:03.815 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 request Login [userName]: taiptht Authencation
+23:54:03.815 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 request Login [userName]: taiptht Authencation
+23:54:30.306 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 In Active
+23:54:30.306 [nioEventLoopGroup-3-15] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58328 In Active
+23:55:18.544 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 Active
+23:55:18.544 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 Active
+23:55:23.817 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 request Login [userName]: vutq [password] 456
+23:55:23.817 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 request Login [userName]: vutq [password] 456
+23:55:23.817 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 request Login SUCCESS
+23:55:23.817 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 request Login SUCCESS
+23:55:23.828 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 request Login [userName]: vutq Authencation
+23:55:23.828 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 request Login [userName]: vutq Authencation
+23:55:46.307 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 Active
+23:55:46.307 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 Active
+23:55:50.421 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 request Login [userName]: taiptht [password] 123
+23:55:50.421 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 request Login [userName]: taiptht [password] 123
+23:55:50.422 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 request Login SUCCESS
+23:55:50.422 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 request Login SUCCESS
+23:55:50.433 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 request Login [userName]: taiptht Authencation
+23:55:50.433 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 request Login [userName]: taiptht Authencation
+23:56:27.731 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 In Active
+23:56:27.731 [nioEventLoopGroup-3-16] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58346 In Active
+23:56:30.258 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 In Active
+23:56:30.258 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58356 In Active
+23:57:00.596 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 Active
+23:57:00.596 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 Active
+23:57:09.187 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Login [userName]: taiptht [password] 123
+23:57:09.187 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Login [userName]: taiptht [password] 123
+23:57:09.194 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Login FAILED
+23:57:09.194 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Login FAILED
+23:57:42.491 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register [name]: Tấn Tài [userName]: taiptht [password]: 123 [avatar]: <ByteString@55bc9c1 size=184281>
+23:57:42.491 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register [name]: Tấn Tài [userName]: taiptht [password]: 123 [avatar]: <ByteString@55bc9c1 size=184281>
+23:57:42.695 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register SUCCESS
+23:57:42.695 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register SUCCESS
+23:58:01.403 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Logout [userName]: taiptht SUCCESS
+23:58:01.403 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Logout [userName]: taiptht SUCCESS
+23:58:32.912 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register [name]: Trần Quang Vũ [userName]: vutq [password]: 456 [avatar]: <ByteString@4825633d size=10016>
+23:58:32.912 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register [name]: Trần Quang Vũ [userName]: vutq [password]: 456 [avatar]: <ByteString@4825633d size=10016>
+23:58:32.915 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register SUCCESS
+23:58:32.915 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 request Register SUCCESS
+23:58:38.609 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 In Active
+23:58:38.609 [nioEventLoopGroup-3-1] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58370 In Active
+23:58:47.145 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 Active
+23:58:47.145 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 Active
+23:59:08.951 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Register [name]: Trung Bím Bò [userName]: trungdv [password]: 789 [avatar]: <ByteString@22ad8503 size=8841>
+23:59:08.951 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Register [name]: Trung Bím Bò [userName]: trungdv [password]: 789 [avatar]: <ByteString@22ad8503 size=8841>
+23:59:08.953 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Register SUCCESS
+23:59:08.953 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Register SUCCESS
+23:59:15.697 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Find [userName]: taiptht SUCCESS
+23:59:15.697 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Find [userName]: taiptht SUCCESS
+23:59:25.389 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Find [userName]: vutq SUCCESS
+23:59:25.389 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request Find [userName]: vutq SUCCESS
+23:59:52.144 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request CreateChannel [userCreate]: trungdv [channelName]: Tai_Vu_Trung [avatar]: <ByteString@1582b30c size=17718> [listMember]: taiptht, vutq, trungdv
+23:59:52.144 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request CreateChannel [userCreate]: trungdv [channelName]: Tai_Vu_Trung [avatar]: <ByteString@1582b30c size=17718> [listMember]: taiptht, vutq, trungdv
+23:59:52.153 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request CreateChannel [channelName]: Tai_Vu_Trung SUCCESS
+23:59:52.153 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 request CreateChannel [channelName]: Tai_Vu_Trung SUCCESS
+23:59:52.154 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 In Active
+23:59:52.154 [nioEventLoopGroup-3-2] INFO  com.ajpham.appchatserver.nettyserver.EchoServerInboundHandler - /127.0.0.1:58394 In Active

@@ -20,6 +20,7 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.LinkedHashSet;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.swing.BorderFactory;
@@ -48,8 +49,8 @@ public class AppChatGUI extends javax.swing.JFrame {
     private static String _token;
     private static UserDTO _userDTO;
     private static String _channelNameActicve;
-    private static ConcurrentHashMap<String, ChannelDTO> _mapChannel;
-    private static ConcurrentHashMap<String, LinkedHashSet<MessageDTO>> _mapChannelMessage;
+    private static ConcurrentHashMap<String, ChannelDTO> _mapChannel; //<channelName, channelDTO>
+    private static ConcurrentHashMap<String, LinkedHashSet<MessageDTO>> _mapChannelMessage; //<channelName, list message>
     private static ServiceUser _serviceUser;
     private static ServiceMessage _serviceMessage;
     private static ServiceChannel _serviceChannel;
@@ -90,9 +91,9 @@ public class AppChatGUI extends javax.swing.JFrame {
         lbLogOut = new javax.swing.JLabel();
         lbAvatarUser = new javax.swing.JLabel();
         lbNameApp = new javax.swing.JPanel();
-        tfFindFriend = new javax.swing.JTextField();
+        tfFindRoom = new javax.swing.JTextField();
         lbUserName = new javax.swing.JLabel();
-        lbChat = new javax.swing.JLabel();
+        lbFindRoom = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         pnInfoFriendChat = new javax.swing.JPanel();
         lbChannelChat = new javax.swing.JLabel();
@@ -208,14 +209,19 @@ public class AppChatGUI extends javax.swing.JFrame {
         lbNameApp.setBackground(new java.awt.Color(255, 255, 255));
         lbNameApp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
-        tfFindFriend.setBackground(new java.awt.Color(255, 255, 255));
-        tfFindFriend.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        tfFindFriend.setForeground(new java.awt.Color(0, 0, 0));
-        tfFindFriend.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
-        tfFindFriend.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        tfFindFriend.addActionListener(new java.awt.event.ActionListener() {
+        tfFindRoom.setBackground(new java.awt.Color(255, 255, 255));
+        tfFindRoom.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        tfFindRoom.setForeground(new java.awt.Color(0, 0, 0));
+        tfFindRoom.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
+        tfFindRoom.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        tfFindRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfFindFriendActionPerformed(evt);
+                tfFindRoomActionPerformed(evt);
+            }
+        });
+        tfFindRoom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfFindRoomKeyPressed(evt);
             }
         });
 
@@ -223,8 +229,19 @@ public class AppChatGUI extends javax.swing.JFrame {
         lbUserName.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbUserName.setForeground(new java.awt.Color(0, 0, 0));
 
-        lbChat.setBackground(new java.awt.Color(255, 255, 255));
-        lbChat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsearch.png"))); // NOI18N
+        lbFindRoom.setBackground(new java.awt.Color(255, 255, 255));
+        lbFindRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsearch.png"))); // NOI18N
+        lbFindRoom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbFindRoomMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbFindRoomMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbFindRoomMouseEntered(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -242,9 +259,9 @@ public class AppChatGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(lbNameAppLayout.createSequentialGroup()
-                        .addComponent(tfFindFriend, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfFindRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbChat)))
+                        .addComponent(lbFindRoom)))
                 .addGap(10, 10, 10))
         );
         lbNameAppLayout.setVerticalGroup(
@@ -256,8 +273,8 @@ public class AppChatGUI extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(5, 5, 5)
                 .addGroup(lbNameAppLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbChat, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                    .addComponent(tfFindFriend))
+                    .addComponent(lbFindRoom, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(tfFindRoom))
                 .addGap(12, 12, 12))
         );
 
@@ -539,7 +556,7 @@ public class AppChatGUI extends javax.swing.JFrame {
     }
 
     public ChannelDTO getChannelActive() {
-        return _mapChannel.get(_channelNameActicve);
+        return _mapChannel.get(_channelNameActicve);    
     }
 
     public void setPicture(JLabel label, byte[] avatar) {
@@ -658,9 +675,9 @@ public class AppChatGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_lbCreateRoomMouseClicked
 
-    private void tfFindFriendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFindFriendActionPerformed
+    private void tfFindRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFindRoomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfFindFriendActionPerformed
+    }//GEN-LAST:event_tfFindRoomActionPerformed
 
     private void listChannelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listChannelMouseClicked
         this.setChannelActive(this.listChannel.getSelectedIndex());
@@ -709,6 +726,62 @@ public class AppChatGUI extends javax.swing.JFrame {
         Border border = BorderFactory.createEmptyBorder();
         this.lbSent.setBorder(border);
     }//GEN-LAST:event_lbSentMouseExited
+
+    private void lbFindRoomMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbFindRoomMouseEntered
+        Border border = BorderFactory.createLineBorder(Color.GRAY, 2);
+        lbFindRoom.setBorder(border);
+    }//GEN-LAST:event_lbFindRoomMouseEntered
+
+    private void lbFindRoomMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbFindRoomMouseExited
+        Border border = BorderFactory.createEmptyBorder();
+        this.lbFindRoom.setBorder(border);
+    }//GEN-LAST:event_lbFindRoomMouseExited
+
+    public int findIndexChannelInListChannel(String channelName){
+       Enumeration<ChannelDTO> list = this._listsChannelModel.elements();
+       int i = 0;
+       while(list.hasMoreElements()){
+           if(list.nextElement().getChannelName().equals(channelName)){
+               return i;
+           }
+           i++;
+       }
+       return -1;
+    }
+    
+    private void lbFindRoomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbFindRoomMouseClicked
+        String channelName = this.tfFindRoom.getText().trim();
+        if(!channelName.equals("")){
+            if(_mapChannel.get(channelName) != null){
+                int index = this.findIndexChannelInListChannel(channelName);
+                this.setChannelActive(index);
+                if (_mapChannel.get(_channelNameActicve).isCheckClick()) {
+                    this.loadMessageInView(_channelNameActicve);
+                } else {
+                    _serviceMessage.sendMessageGetAllMessageChannel(_token, _channelNameActicve);
+                }
+            } 
+        } 
+        this.tfFindRoom.setText("");
+    }//GEN-LAST:event_lbFindRoomMouseClicked
+
+    private void tfFindRoomKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfFindRoomKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            String channelName = this.tfFindRoom.getText().trim();
+            if(!channelName.equals("")){
+                if(_mapChannel.get(channelName) != null){
+                    int index = this.findIndexChannelInListChannel(channelName);
+                    this.setChannelActive(index);
+                    if (_mapChannel.get(_channelNameActicve).isCheckClick()) {
+                        this.loadMessageInView(_channelNameActicve);
+                    } else {
+                        _serviceMessage.sendMessageGetAllMessageChannel(_token, _channelNameActicve);
+                    }
+                } 
+            } 
+            this.tfFindRoom.setText("");
+        }
+    }//GEN-LAST:event_tfFindRoomKeyPressed
 
     public void initLoginForm() {
         LoginFormGUI signinGUI = new LoginFormGUI(_nettyClient);
@@ -764,9 +837,9 @@ public class AppChatGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbAvatarChannelChat;
     private javax.swing.JLabel lbAvatarUser;
     private javax.swing.JLabel lbChannelChat;
-    private javax.swing.JLabel lbChat;
     private javax.swing.JLabel lbCreateRoom;
     private javax.swing.JLabel lbExit;
+    private javax.swing.JLabel lbFindRoom;
     private javax.swing.JLabel lbLogOut;
     private javax.swing.JLabel lbMiniWindow;
     private javax.swing.JPanel lbNameApp;
@@ -783,6 +856,6 @@ public class AppChatGUI extends javax.swing.JFrame {
     private javax.swing.JPanel pnTitleMessenger;
     private javax.swing.JTextArea taInputMessage;
     private javax.swing.JTextArea taViewMesage;
-    private javax.swing.JTextField tfFindFriend;
+    private javax.swing.JTextField tfFindRoom;
     // End of variables declaration//GEN-END:variables
 }

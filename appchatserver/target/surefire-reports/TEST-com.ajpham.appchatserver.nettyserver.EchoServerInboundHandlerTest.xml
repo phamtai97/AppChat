@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="1" name="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" time="0.754" errors="10" skipped="0">
+<testsuite tests="12" failures="1" name="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" time="0.564" errors="11" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -31,7 +31,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="4.15.0-33-generic"/>
+    <property name="os.version" value="4.15.0-34-generic"/>
     <property name="user.home" value="/home/taipham"/>
     <property name="user.timezone" value="Asia/Ho_Chi_Minh"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -42,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/usr/local/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/usr/local/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -60,7 +60,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleLoginCase1" time="0.001">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleLoginCase1" time="0">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -101,7 +101,7 @@
 </error>
     <system-out>handleLogin
 </system-out>
-    <system-err>Sep 11, 2018 6:09:14 PM com.ajpham.appchatserver.database.RockDBApp connect
+    <system-err>Sep 13, 2018 9:31:36 PM com.ajpham.appchatserver.database.RockDBApp connect
 SEVERE: null
 org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks available
 	at org.rocksdb.RocksDB.open(Native Method)
@@ -133,7 +133,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
 
 </system-err>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleLoginCase2" time="0">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleLoginCase2" time="0.001">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -217,7 +217,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
     <system-out>handleLogin
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleFindUserCase1" time="0">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleFindUserCase1" time="0.001">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -259,7 +259,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
     <system-out>handleFindUser
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleFindUserCase2" time="0.001">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleFindUserCase2" time="0">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -301,7 +301,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
     <system-out>handleFindUser
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleCreateChannelCase1" time="0.008">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleCreateChannelCase1" time="0.013">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -385,7 +385,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
     <system-out>handleCreateChannel
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleGetAllChannel" time="0.617">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleGetAllChannel" time="0.518">
     <failure message="expected:&lt;2&gt; but was:&lt;3&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;3&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -429,7 +429,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
     <system-out>handleGetAllChannel
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleGetAllMessage" time="0.005">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleGetAllMessage" time="0.004">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -470,7 +470,7 @@ org.rocksdb.RocksDBException: While lock file: ./teststorage/LOCK: No locks avai
 </error>
     <system-out>handleGetAllMessage
 </system-out>
-    <system-err>Sep 11, 2018 6:09:15 PM com.ajpham.appchatserver.database.RockDBApp connect
+    <system-err>Sep 13, 2018 9:31:36 PM com.ajpham.appchatserver.database.RockDBApp connect
 SEVERE: null
 org.rocksdb.RocksDBException: While lock file: ./storage/LOCK: No locks available
 	at org.rocksdb.RocksDB.open(Native Method)
@@ -513,7 +513,7 @@ org.rocksdb.RocksDBException: While lock file: ./storage/LOCK: No locks availabl
 
 </system-err>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleRegisterCase1" time="0">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleRegisterCase1" time="0.002">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -555,7 +555,7 @@ org.rocksdb.RocksDBException: While lock file: ./storage/LOCK: No locks availabl
     <system-out>handleRegister
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleRegisterCase2" time="0.008">
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleRegisterCase2" time="0.009">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:72)
 	at com.ajpham.appchatserver.database.RockDBApp.contains(RockDBApp.java:19)
@@ -597,5 +597,88 @@ org.rocksdb.RocksDBException: While lock file: ./storage/LOCK: No locks availabl
     <system-out>handleRegister
 </system-out>
   </testcase>
-  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleMessageChat" time="0.102"/>
+  <testcase classname="com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest" name="testHandleMessageChat" time="0.007">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.ajpham.appchatserver.database.RockDBApp.put(RockDBApp.java:43)
+	at com.ajpham.appchatserver.database.RockDBApp.put(RockDBApp.java:19)
+	at com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest.testHandleMessageChat(EchoServerInboundHandlerTest.java:271)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+    <system-out>handleMessageChat
+</system-out>
+    <system-err>Sep 13, 2018 9:31:36 PM com.ajpham.appchatserver.database.RockDBApp connect
+SEVERE: null
+org.rocksdb.RocksDBException: While lock file: ./storage/LOCK: No locks available
+	at org.rocksdb.RocksDB.open(Native Method)
+	at org.rocksdb.RocksDB.open(RocksDB.java:231)
+	at com.ajpham.appchatserver.database.RockDBApp.connect(RockDBApp.java:31)
+	at com.ajpham.appchatserver.nettyserver.EchoServerInboundHandlerTest.testHandleMessageChat(EchoServerInboundHandlerTest.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+
+</system-err>
+  </testcase>
 </testsuite>

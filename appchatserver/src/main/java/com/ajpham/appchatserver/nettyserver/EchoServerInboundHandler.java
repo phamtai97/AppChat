@@ -27,15 +27,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author taipham
  */
 public class EchoServerInboundHandler extends SimpleChannelInboundHandler<RequestDTO.Request> {
-    
+
     private ResponseDTO.Response _msgResponse;
     private ChannelGroup _channelGroup;
     private ConcurrentHashMap<String, ChannelId> _mapUserChannel; //userName, channelId
@@ -44,7 +46,8 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
     private static HandleReadWriteStream _handleReadWriteStream;
     final private static String ALG = "hmacSha256";
     final private static String pattern = "yyyy-MM-dd HH:mm:ss";
-    
+    private static final Logger _logger = LoggerFactory.getLogger(EchoServerInboundHandler.class);
+
     public EchoServerInboundHandler(MyStorage database, ChannelGroup channelGroup, ConcurrentHashMap<String, ChannelId> mapUserChannel) {
         _storage = database;
         _handleReadWriteStream = new HandleReadWriteStream();
@@ -52,35 +55,38 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
         this._mapUserChannel = mapUserChannel;
         this._simpleDateFormat = new SimpleDateFormat(pattern);
     }
-    
+
     public void sendMessage(Channel channel, ResponseDTO.Response msgResponse) {
         channel.writeAndFlush(msgResponse);
     }
-    
+
     public Channel getChannel(ChannelId channelId) {
         return _channelGroup.find(channelId);
     }
-    
+
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         _channelGroup.add(ctx.channel());
     }
-    
+
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         _channelGroup.remove(ctx.channel());
     }
-    
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Channel incoming = ctx.channel();
-        System.out.println("SimpleChatClient: " + incoming.remoteAddress() + " Active");
+//        System.out.println("SimpleChatClient: " + incoming.remoteAddress() + " Active");
+        _logger.info(incoming.remoteAddress() + " Active");
     }
-    
+
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         Channel incoming = ctx.channel();
-        System.out.println("SimpleChatClient: " + incoming.remoteAddress() + " In Acitve");
+//        System.out.println("SimpleChatClient: " + incoming.remoteAddress() + " In Acitve");
+        _logger.info(incoming.remoteAddress() + " In Active");
+
     }
 
 //     @Override
@@ -92,10 +98,11 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.close();
     }
-    
+
     public void handleLogin(ChannelHandlerContext ctx, RequestDTO.User user) throws UnsupportedEncodingException, InvalidKeyException {
         String userName = user.getUserName();
         String password = user.getPassword();
+        _logger.info(ctx.channel().remoteAddress() + " request Login [userName]: " + userName + " [password] " + password);
         if (UserBUS.checkUserLogin(userName, password)) {
             //check db
             if (_storage.contains("user." + userName)) {
@@ -111,44 +118,53 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                                         .setToken(token))
                                 .setStatus("Login Success")
                                 .build();
+                        _logger.info(ctx.channel().remoteAddress() + " request Login SUCCESS");
+
                     } else {
                         this._msgResponse = ResponseDTO.Response.newBuilder()
                                 .setType(ResponseDTO.TypeMessage.LOGIN)
                                 .setStatus("Login Failed")
-                                .build();
+                                .build();                   
+                        _logger.info(ctx.channel().remoteAddress() + " request Login FAILED");
+
                     }
                 } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(EchoServerInboundHandler.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(EchoServerInboundHandler.class.getName()).log(Level.SEVERE, null, ex);
+                    _logger.info(ex.getMessage());
                 }
             } else {
                 this._msgResponse = ResponseDTO.Response.newBuilder()
                         .setType(ResponseDTO.TypeMessage.LOGIN)
                         .setStatus("Login Failed")
                         .build();
+                _logger.info(ctx.channel().remoteAddress() + " request Login FAILED");
+
             }
         } else {
             this._msgResponse = ResponseDTO.Response.newBuilder()
                     .setType(ResponseDTO.TypeMessage.LOGIN)
                     .setStatus("Login Failed")
                     .build();
+            _logger.info(ctx.channel().remoteAddress() + " request Login FAILED");
         }
-        
+
         this.sendMessage(ctx.channel(), this._msgResponse);
     }
-    
-    
+
     public void handleRegister(ChannelHandlerContext ctx, RequestDTO.User user) {
         String name = user.getName();
         String userName = user.getUserName();
         String password = user.getPassword();
         ByteString avatar = user.getAvatar();
-        
+        _logger.info(ctx.channel().remoteAddress() + " request Register [name]: " + name + " [userName]: " + userName + " [password]: " + password
+        + " [avatar]: " + avatar);
         if (UserBUS.checkUserRegister(name, userName, password, String.valueOf(avatar))) {
             if (_storage.contains("user." + userName)) {
                 this._msgResponse = ResponseDTO.Response.newBuilder()
                         .setType(ResponseDTO.TypeMessage.REGISTER)
                         .setStatus("Register Failed")
                         .build();
+                _logger.info(ctx.channel().remoteAddress() + " request Register FAILED");
             } else {
                 //save db
                 //encryption password
@@ -171,9 +187,12 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                                     .build())
                             .setStatus("Register Success")
                             .build();
+                            _logger.info(ctx.channel().remoteAddress() + " request Register SUCCESS");
                     this._mapUserChannel.put(userName, ctx.channel().id()); //<userName, ChannelId>
                 } catch (UnsupportedEncodingException | InvalidKeyException ex) {
-                    Logger.getLogger(EchoServerInboundHandler.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(EchoServerInboundHandler.class.getName()).log(Level.SEVERE, null, ex);
+                    _logger.info(ex.getMessage());
+
                 }
             }
         } else {
@@ -181,14 +200,16 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                     .setType(ResponseDTO.TypeMessage.REGISTER)
                     .setStatus("Register Failed")
                     .build();
+                    _logger.info(ctx.channel().remoteAddress() + " request Register FAILED");
         }
         this.sendMessage(ctx.channel(), this._msgResponse);
     }
-    
+
     public void handleAuthencation(ChannelHandlerContext ctx, RequestDTO.Token token) throws UnsupportedEncodingException, InvalidKeyException, ClassNotFoundException {
         String tokenTmp = token.getToken();
         String[] elements = tokenTmp.split("\\.");
         String userName = TokenDTO.base64Decode(elements[1]);
+        _logger.info(ctx.channel().remoteAddress() + " request Login [userName]: " + userName + " Authencation");
         UserDTO userDTO = (UserDTO) _handleReadWriteStream.toObject((byte[]) _storage.get("user." + userName));
         this._msgResponse = ResponseDTO.Response.newBuilder()
                 .setType(ResponseDTO.TypeMessage.AUTHENCATION)
@@ -202,7 +223,7 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
         this.sendMessage(ctx.channel(), this._msgResponse);
         this._mapUserChannel.put(userName, ctx.channel().id()); //<userName, ChannelId>
     }
-    
+
     public void handleFindUser(ChannelHandlerContext ctx, RequestDTO.User user) throws UnsupportedEncodingException, InvalidKeyException {
         if (_storage.contains("user." + user.getUserName())) {//find
             _msgResponse = ResponseDTO.Response.newBuilder()
@@ -212,15 +233,18 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                             .build())
                     .setStatus("Find")
                     .build();
+            _logger.info(ctx.channel().remoteAddress() + " request Find [userName]: " +  user.getUserName() + " SUCCESS");
+
         } else {
             _msgResponse = ResponseDTO.Response.newBuilder()
                     .setType(ResponseDTO.TypeMessage.FINDUSER)
                     .setStatus("Not Found")
                     .build();
+            _logger.info(ctx.channel().remoteAddress() + " request Find [userName]: " +  user.getUserName() + " FAILED");
         }
         this.sendMessage(ctx.channel(), this._msgResponse);
     }
-    
+
     public void addChannelInUserChannel(String userName, String channelName) throws UnsupportedEncodingException {
         if (_storage.contains(userName + ".channels")) {
             String channels = new String((byte[]) _storage.get(userName + ".channels"), "utf8");
@@ -230,21 +254,22 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
             _storage.put(userName + ".channels", channelName.getBytes("utf-8"));
         }
     }
-    
+
     public void handleCreateChannel(ChannelHandlerContext ctx, RequestDTO.Channel channelCreate) throws UnsupportedEncodingException, ClassNotFoundException {
         String userCreate = channelCreate.getUserCreate();
         String channelName = channelCreate.getChannelName();
         ByteString avatar = channelCreate.getAvatar();
         String listMembers = channelCreate.getListMembers();
-        
-        if (ChannelBUS.checkRoomCreate(userCreate, listMembers, channelName, String.valueOf(avatar))) 
-        {
+         _logger.info(ctx.channel().remoteAddress() + " request CreateChannel [userCreate]: " + userCreate + " [channelName]: " + channelName + " [avatar]: " + avatar
+        + " [listMember]: " + listMembers);
+        if (ChannelBUS.checkRoomCreate(userCreate, listMembers, channelName, String.valueOf(avatar))) {
             //check db name channel
             if (_storage.contains("channel." + channelName)) {
                 _msgResponse = ResponseDTO.Response.newBuilder()
                         .setType(ResponseDTO.TypeMessage.CREATECHANNEL)
                         .setStatus("Create Channel Failed")
                         .build();
+                _logger.info(ctx.channel().remoteAddress() + " request CreateChannel [channelName]: " +  channelName + " FAILED");
                 this.sendMessage(ctx.channel(), _msgResponse);
             } else {
                 //save db
@@ -264,6 +289,7 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                                 .build())
                         .setStatus("Create Channel Success")
                         .build();
+                _logger.info(ctx.channel().remoteAddress() + " request CreateChannel [channelName]: " + channelName + " SUCCESS");
                 String[] elements = listMembers.split("\\, ");
                 ChannelId channelId;
                 Channel channel;
@@ -278,7 +304,7 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
             }
         }
     }
-    
+
     public boolean verifyToken(ChannelHandlerContext ctx, RequestDTO.Token token) throws UnsupportedEncodingException, InvalidKeyException {
         if (!TokenDTO.verifyToken(token.getToken())) {
             this._msgResponse = ResponseDTO.Response.newBuilder()
@@ -289,7 +315,7 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
         }
         return true;
     }
-    
+
     public void handleGetAllChannel(ChannelHandlerContext ctx, RequestDTO.Token token) throws UnsupportedEncodingException, ClassNotFoundException {
         //get userName from token
         String tokenTmp = token.getToken();
@@ -299,7 +325,6 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
         //get list channel from db
         String key = userName + ".channels";
         if (_storage.contains(key)) {
-            
             String listChannels = new String((byte[]) _storage.get(key), "utf8");
             String[] elementsChannels = listChannels.split("\\, ");
             for (String channel : elementsChannels) {
@@ -315,20 +340,20 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                 listChannelsResult.add(resChannel);
             }
         }
-        
+
         Iterable<ResponseDTO.Channel> iterableChannels = listChannelsResult;
-        
+
         ResponseDTO.ListChannel resListChannels = ResponseDTO.ListChannel.newBuilder()
                 .addAllListChannels(iterableChannels)
                 .build();
-        
+
         _msgResponse = ResponseDTO.Response.newBuilder()
                 .setType(ResponseDTO.TypeMessage.LISTCHANNEL)
                 .setListChannel(resListChannels)
                 .build();
         this.sendMessage(ctx.channel(), _msgResponse);
     }
-    
+
     public void handleLogout(ChannelHandlerContext ctx, RequestDTO.Token token) {
         String tokenTmp = token.getToken();
         String[] elements = tokenTmp.split("\\.");
@@ -338,10 +363,11 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                 .setType(ResponseDTO.TypeMessage.LOGOUT)
                 .setStatus("Logout Success")
                 .build();
+            _logger.info(ctx.channel().remoteAddress() + " request Logout [userName]: " + userName + " SUCCESS");
         this.sendMessage(ctx.channel(), _msgResponse);
         _mapUserChannel.remove(userName);
     }
-    
+
     public void addIdMessageInChannelMessage(String channelName, String idMessage) throws UnsupportedEncodingException {
         if (_storage.contains(channelName + ".messages")) {
             String messages = new String((byte[]) _storage.get(channelName + ".messages"), "utf8");
@@ -351,7 +377,7 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
             _storage.put(channelName + ".messages", idMessage.getBytes("utf-8")); //<channelName.messages, idMessage>
         }
     }
-    
+
     public void handleMessageChat(ChannelHandlerContext ctx, RequestDTO.Token token, RequestDTO.Message message, String channelName) throws UnsupportedEncodingException {
         String tokenTmp = token.getToken();
         String[] elements = tokenTmp.split("\\.");
@@ -359,7 +385,8 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
         String messBody = message.getBody();
         Date date = new Date();
         String id = String.valueOf(date.getTime());
-
+        _logger.info(ctx.channel().remoteAddress() + " request Chat [userName]: " + userName + " [messBody]: " + messBody + " to [channelName]: " +
+        channelName);
         //save db
         MessageDTO messageDTO = new MessageDTO(id, messBody, userName, id);
         byte[] value = _handleReadWriteStream.toStream(messageDTO);
@@ -388,7 +415,7 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
             }
         }
     }
-    
+
     public void handleGetAllMessage(ChannelHandlerContext ctx, RequestDTO.Token token, String channelName) throws UnsupportedEncodingException, ClassNotFoundException {
         String key = channelName + ".messages";
         List<ResponseDTO.Message> listMessagesResult = new ArrayList<>();
@@ -405,13 +432,13 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
                         .build();
                 listMessagesResult.add(resMessage);
             }
-            
+
             Iterable<ResponseDTO.Message> iterableMessages = listMessagesResult;
-            
+
             ResponseDTO.AllMessage resAllMessage = ResponseDTO.AllMessage.newBuilder()
                     .addAllAllMessage(iterableMessages)
                     .build();
-            
+
             _msgResponse = ResponseDTO.Response.newBuilder()
                     .setType(ResponseDTO.TypeMessage.ALLMESSAGE)
                     .setAllMessage(resAllMessage)
@@ -420,11 +447,11 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
             this.sendMessage(ctx.channel(), _msgResponse);
         }
     }
-    
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, RequestDTO.Request msg) throws Exception {
         RequestDTO.TypeMessage type = msg.getType();
-        
+
         switch (type) {
             case LOGIN:
                 this.handleLogin(ctx, msg.getUser());
@@ -470,6 +497,6 @@ public class EchoServerInboundHandler extends SimpleChannelInboundHandler<Reques
             default:
                 break;
         }
-        
+
     }
 }
