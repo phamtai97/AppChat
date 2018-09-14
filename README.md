@@ -15,6 +15,8 @@
 
 ![Imgur](https://i.imgur.com/N2hg0ta.png)
 
+- Server có ghi log lại các quá trình gửi nhận của client tới server như login, register, gửi message chat, tạo room chat,...
+
 ## Database
 - Sử dụng RockDB
 - Định nghĩa các key-value trong DB
