@@ -1,6 +1,10 @@
 # App Chat Smile Alo
 
-![](https://media.giphy.com/media/iNKB2snFBDCMW5MZwo/giphy.gif)
+<div align="center">
+	<img src="https://media.giphy.com/media/iNKB2snFBDCMW5MZwo/giphy.gif">
+	<br/>
+</div>
+<br/>
 
 ## Overview
 - App Smile Alo là ứng dụng chat trên môi trường desktop, được viết bằng ngôn ngữ JAVA.
@@ -36,25 +40,26 @@
     `[channelName.messages; list messageId]`
 
 Object user: 
-```
-    String _name;
-    String _userName;
-    String _password;
+```sh
+String _name;
+String _userName;
+String _password;
 ```
 
 Object Channel:
+```sh
+String _userCreate;
+String _channelName;
+byte[] _avatar;
+String _listMembers;
 ```
-    String _userCreate;
-    String _channelName;
-    byte[] _avatar;
-    String _listMembers;
-```
+
 Objecct Message:
-```
-    String _id;
-    String _body;
-    String _userSend;
-    String _timeSend;
+```sh
+String _id;
+String _body;
+String _userSend;
+String _timeSend;
 ```
 
 
